@@ -1,12 +1,28 @@
 {
   "name": "coca",
   "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/AROKEN-ru/coca#readme",
+  "bugs": {
+    "url": "https://github.com/AROKEN-ru/coca/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AROKEN-ru/coca.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "vite.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "format": "prettier . --write"
+  },
+  "dependencies": {
+    "intl-tel-input": "^19.2.16",
+    "swiper": "^11.0.5"
   },
   "devDependencies": {
     "eslint": "^8.56.0",
@@ -23,9 +39,5 @@
     "vite-plugin-html-inject": "^1.1.2",
     "vite-plugin-image-optimizer": "^1.1.7",
     "vite-plugin-minify": "^1.5.2"
-  },
-  "dependencies": {
-    "intl-tel-input": "^19.2.16",
-    "swiper": "^11.0.5"
   }
 }
