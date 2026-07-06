@@ -1,16 +1,109 @@
 .beliefs {
   padding-bottom: 165px;
-  &_wrapper {
+  padding-left: 120px;
+  @include mini-desktop {
+    padding: 0 0 90px 90px;
+  }
+  @include tablet {
+    padding: 0 0 30px 30px;
+  }
+  @include small-mobile {
+    padding: 0 0 10px 10px;
+  }
+  &-container {
+    position: relative;
+    padding-right: 0;
+  }
+  &-slider {
+    @include small-tablet {
+      margin: auto;
+    }
+  }
+  &-btns {
+    position: absolute;
     display: flex;
-  }
-  &-slide {
-    &-img,
-    &-img2,
-    &-img3 {
-      max-width: 502px;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: var(--z-index-2);
+    top: 100px;
+    left: 464px;
+    @include small-desktop {
+      left: 480px;
     }
-    &-img3 {
-      margin-bottom: 24px;
+    @include mini-desktop {
+      width: 70px;
+      height: 70px;
+    }
+    @include tablet {
+      display: none;
+    }
+    background-color: #fff{
     }
   }
+  &-wrapper {
+    &-slide {
+      width: 502px;
+      flex-shrink: 0;
+
+      @include tablet {
+        display: flex;
+        justify-content: center;
+      }
+      &__title {
+        margin: 24px 0 8px;
+        line-height: 150%;
+        letter-spacing: -1%;
+        vertical-align: middle;
+      }
+      &__descr {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        color: #7e8492;
+        margin-bottom: 32px;
+      }
+      &__btn {
+        padding: 16px 32px;
+        background-color: var(--neutral-color-100);
+        border-radius: 100px;
+        transition: all 0.3s;
+        a {
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          color: var(--neutral-color-10);
+        }
+        svg {
+          margin-left: 5px;
+          path {
+            fill: var(--neutral-color-10);
+          }
+        }
+      }
+      &__btn:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.beliefs-slider {
+  width: 100%;
+  /* НЕ ставь здесь max-width, если хочешь, чтобы слайдер занимал всю ширину */
+}
+
+.beliefs-slider .swiper-wrapper {
+  /* У wrapper НЕ должно быть фиксированной ширины! */
+  /* width: 502px;  <-- УДАЛИТЬ, если есть */
+}
+
+.beliefs-slider .swiper-slide {
+  width: 502px; /* Фиксированная ширина слайда */
+  flex-shrink: 0; /* Запрещаем сжиматься */
+  /* НЕ ставь margin здесь — расстояние задаётся через spaceBetween в JS */
 }
