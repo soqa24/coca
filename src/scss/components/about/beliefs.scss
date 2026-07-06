@@ -1,4 +1,5 @@
 .beliefs {
+  position: relative;
   padding-bottom: 165px;
   padding-left: 120px;
   @include mini-desktop {
@@ -8,12 +9,14 @@
     padding: 0 0 30px 30px;
   }
   @include small-mobile {
-    padding: 0 0 10px 10px;
+    padding: 0 0 40px 20px;
   }
+
   &-container {
     position: relative;
     padding-right: 0;
   }
+
   &-slider {
     @include small-tablet {
       margin: auto;
@@ -40,7 +43,8 @@
     @include tablet {
       display: none;
     }
-    background-color: #fff{
+    background-color: #fff {
+
     }
   }
   &-wrapper {
@@ -91,19 +95,25 @@
     }
   }
 }
+.beliefs::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  width: 551px;
+  height: 551px;
+  opacity: 0.4;
+  background-color: #fa7515;
+  filter: blur(220px);
+  z-index: var(--z-index-0);
+  top: 180px;
+  left: 21px;
+}
 
 .beliefs-slider {
   width: 100%;
-  /* НЕ ставь здесь max-width, если хочешь, чтобы слайдер занимал всю ширину */
-}
-
-.beliefs-slider .swiper-wrapper {
-  /* У wrapper НЕ должно быть фиксированной ширины! */
-  /* width: 502px;  <-- УДАЛИТЬ, если есть */
 }
 
 .beliefs-slider .swiper-slide {
-  width: 502px; /* Фиксированная ширина слайда */
-  flex-shrink: 0; /* Запрещаем сжиматься */
-  /* НЕ ставь margin здесь — расстояние задаётся через spaceBetween в JS */
+  width: 502px;
+  flex-shrink: 0;
 }
