@@ -26,36 +26,3 @@ export function initBeliefsSlider() {
     },
   });
 }
-// export function initBeliefsSlider() {
-//   const sliderEl = document.querySelector('.beliefs-slider');
-
-//   const slides = sliderEl.querySelectorAll('.beliefs-slider-wrapper-slide');
-//   const totalSlides = slides.length;
-
-//   const shouldLoop = totalSlides >= 2.5;
-
-//   new Swiper(sliderEl, {
-//     loop: shouldLoop,
-//     slidesPerView: 1,
-//     spaceBetween: 32,
-
-//     breakpoints: {
-//       640: {
-//         slidesPerView: 1,
-//         spaceBetween: 20,
-//       },
-//       991: {
-//         slidesPerView: 2,
-//         spaceBetween: 32,
-//       },
-//       1201: {
-//         slidesPerView: 2,
-//         spaceBetween: 32,
-//       },
-//       1441: {
-//         slidesPerView: 2.5,
-//         spaceBetween: 32,
-//       },
-//     },
-//   });
-// }

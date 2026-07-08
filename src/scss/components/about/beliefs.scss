@@ -44,9 +44,9 @@
       display: none;
     }
     background-color: #fff {
-
     }
   }
+
   &-wrapper {
     &-slide {
       width: 502px;
@@ -56,12 +56,14 @@
         display: flex;
         justify-content: center;
       }
+
       &__title {
         margin: 24px 0 8px;
         line-height: 150%;
         letter-spacing: -1%;
         vertical-align: middle;
       }
+
       &__descr {
         font-weight: 500;
         font-size: 18px;
@@ -71,30 +73,36 @@
         color: #7e8492;
         margin-bottom: 32px;
       }
+
       &__btn {
         padding: 16px 32px;
         background-color: var(--neutral-color-100);
         border-radius: 100px;
         transition: all 0.3s;
+
         a {
           display: flex;
           align-items: center;
           font-size: 16px;
           color: var(--neutral-color-10);
         }
+
         svg {
           margin-left: 5px;
+
           path {
             fill: var(--neutral-color-10);
           }
         }
       }
+
       &__btn:hover {
         transform: scale(1.05);
       }
     }
   }
 }
+
 .beliefs::after {
   content: '';
   position: absolute;
@@ -109,11 +117,11 @@
   left: 21px;
 }
 
-.beliefs-slider {
+.beliefs-slider{
   width: 100%;
 }
 
 .beliefs-slider .swiper-slide {
-  width: 502px;
   flex-shrink: 0;
+  width: 502px;
 }
