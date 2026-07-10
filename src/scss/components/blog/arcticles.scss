@@ -68,6 +68,9 @@
 
       &__aboutAuthor {
         @include flex-justify-between;
+        @include tablet{
+          display: block;
+        }
       }
 
       &__author {
@@ -82,7 +85,7 @@
         color: #7e8492;
 
         @include tablet {
-          display: block;
+          margin: 16px 0 0;
         }
       }
 
