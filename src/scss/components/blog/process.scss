@@ -1,0 +1,74 @@
+.process {
+  padding: 120px 0 120px;
+  background-color: #1d1e25;
+
+  @include small-tablet {
+    padding: 50px 0 50px;
+  }
+
+  &-grid {
+    display: grid;
+    gap: 32px;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr 1fr;
+
+    @include small-tablet {
+      display: block;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .process-grid__card:nth-child(1) {
+      // стили для 1-й карточки
+      margin-bottom: 159px;
+
+      @include small-tablet {
+        margin-bottom: 70px;
+      }
+    }
+
+    .process-grid__card:nth-child(4) {
+      margin-top: -244px;
+
+      @include small-tablet {
+        margin-top: 0;
+      }
+    }
+
+    &__card {
+      justify-items: center;
+      height: 100%;
+
+      @include small-tablet {
+        margin-bottom: 70px;
+      }
+
+      & img {
+        @include small-tablet {
+          width: 80%;
+        }
+
+        @include small-mobile {
+          width: 100%;
+        }
+      }
+
+      &-title {
+        color: #fff;
+        margin: 24px 0 24px;
+        font-weight: 600;
+
+        @include small-tablet {
+          margin: 15px 0 15px;
+        }
+      }
+
+      &-desrc {
+        max-width: 515px;
+        font-weight: 500;
+        line-height: 32px;
+        color: #7e8492;
+      }
+    }
+  }
+}
