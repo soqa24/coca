@@ -1,0 +1,226 @@
+.our-employees {
+  position: relative;
+  padding: 160px 0 165px;
+
+  @include small-desktop {
+    padding: 120px 0 135px;
+  }
+
+  @include tablet {
+    padding: 80px 0 90px;
+  }
+
+  @include mobile {
+    padding: 65px 0 80px;
+  }
+
+  &-title {
+    margin-bottom: 24px;
+    max-width: 900px;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 120%;
+    letter-spacing: -2px;
+
+    @include small-tablet {
+      font-size: 52px;
+    }
+
+    @include mobile {
+      font-size: 48px;
+      text-align: center;
+    }
+
+    @include small-mobile {
+      font-size: 42px;
+    }
+  }
+
+  &-desrc {
+    max-width: 534px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    color: #7e8492;
+  }
+
+  &-slider {
+    position: relative;
+    margin: 80px 0 100px;
+
+    @include tablet {
+      margin: 60px 0 70px;
+    }
+
+    &-btns {
+      position: absolute;
+      top: 180px;
+      left: 355px;
+      z-index: var(--z-index-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+
+      @include small-desktop {
+        display: none;
+      }
+    }
+  }
+
+  &-swiper {
+    &-slide {
+      @include small-tablet {
+        justify-items: center;
+      }
+
+      &-img {
+        @include small-tablet {
+          display: flex;
+          justify-self: center;
+        }
+      }
+
+      &-info {
+        @include flex-justify-between;
+        margin-top: 16px;
+        max-width: 379px;
+
+        @include small-tablet {
+          justify-content: center;
+        }
+
+        @include small-mobile {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        &-survey {
+          @include small-tablet {
+            margin-right: 85px;
+          }
+
+          @include small-mobile {
+            margin-right: 0;
+          }
+
+          &-name {
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 150%;
+          }
+
+          &-jobTitle {
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 18px;
+            line-height: 150%;
+          }
+        }
+
+        &-socials {
+          display: flex;
+
+          :not(:last-child) {
+            margin-right: 8px;
+          }
+
+          @include small-mobile {
+            justify-content: center;
+            margin-top: 8px;
+          }
+
+          &-bg {
+            &-svg {
+              @include flex-all-center;
+              border-radius: 50%;
+              width: 32px;
+              height: 32px;
+              background-color: var(--neutral-color-150);
+              transition: all 0.3s;
+
+              &:hover {
+                background-color: var(--neutral-color-20);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-slide .swiper-slide {
+      @include small-desktop {
+        display: grid;
+        justify-content: center;
+      }
+    }
+  }
+
+  &-call {
+    @include flex-justify-between;
+
+    @include tablet {
+      display: block;
+      justify-items: center;
+      text-align: center;
+    }
+
+    &-h3 {
+      max-width: 626px;
+
+      @include mini-desktop {
+        margin-bottom: 8px;
+        max-width: 420px;
+        font-size: 48px;
+      }
+
+      @include small-mobile {
+        margin-bottom: 15px;
+      }
+    }
+
+    &-right {
+      max-width: 502px;
+
+      &-desrc {
+        font-weight: 500;
+        line-height: 32px;
+        margin-bottom: 24px;
+        color: #7e8492;
+      }
+
+      &-link {
+        color: var(--neutral-color-100);
+        align-items: center;
+        transition: all 0.3s;
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        svg {
+          margin-left: 5px;
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+}
+
+.our-employees::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 100px;
+  z-index: var(--z-index-0);
+  border-radius: 50%;
+  width: 525px;
+  height: 525px;
+  background-color: #E2F8F0B2;
+  opacity: 0.4;
+  filter: blur(180px);
+}
