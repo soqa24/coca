@@ -1,0 +1,119 @@
+.publications {
+  padding: 160px 0 160px;
+
+@include tablet{
+    padding: 80px 0 80px;
+}
+
+@include small-tablet{
+    padding: 50px 0 50px;
+}
+
+  &__top {
+    @include flex-justify-between;
+    align-items: center;
+    margin-bottom: 80px;
+
+    &-title {
+      margin-bottom: 24px;
+    }
+
+    &-desrc {
+      max-width: 435px;
+      font-weight: 500;
+      line-height: 32px;
+      color: #7e8492;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__btn {
+    @include flex-all-center;
+    border: 1px solid var(--neutral-color-40);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition:
+      background-color var(--transition),
+      border-color var(--transition);
+
+    @include small-mobile {
+      width: 40px;
+      height: 40px;
+    }
+
+    & svg path {
+      transition: fill var(--transition);
+    }
+
+    &:hover {
+      border-color: var(--neutral-color-100);
+      background-color: var(--neutral-color-100);
+
+      & svg path {
+        fill: var(--neutral-color-10);
+      }
+    }
+
+    &--next {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__comments {
+    @include mini-desktop {
+      text-align: center;
+    }
+  }
+
+  &__slider {
+    padding-left: calc((100vw - 1230px) / 2);
+
+    &__slide {
+      &__title {
+        margin: 24px 0 16px;
+        max-width: 407px;
+        font-weight: 600;
+        line-height: 42px;
+        letter-spacing: -1px;
+
+        @include mini-desktop{
+            justify-self: center;
+        }
+      }
+
+      &__desrc {
+        margin-bottom: 24px;
+        max-width: 407px;
+        font-weight: 500;
+        line-height: 32px;
+        color: #7e8492;
+
+        @include mini-desktop{
+            justify-self: center;
+        }
+      }
+
+      &__btn {
+        border: 1px solid #7e8492;
+        border-radius: 100px;
+        padding: 16px 45px;
+        background-color: transparent;
+        color: var(--neutral-color-10);
+        transition: var(--transition);
+
+        a {
+          color: var(--neutral-color-100);
+        }
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
